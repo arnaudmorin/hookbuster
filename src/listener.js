@@ -158,7 +158,7 @@ function _forwardEvent(event_object) {
 
     //gathering some details
     const options = {
-        hostname: 'localhost',
+        hostname: '127.0.0.1',
         port: specifications.port,
         method: 'POST',
         headers: {
