@@ -117,6 +117,14 @@ function gatherEvent(resource) {
 }
 
 
+// Try to parse cli args
+const cli_args = process.argv.slice(2);
+console.log('args: ', cli_args);
+if (cli_args.length == 2) {
+    process.env.TOKEN = cli_args[0];
+    process.env.PORT = cli_args[1];
+}
+
 if ((process.env.TOKEN) && (process.env.PORT)) {
     specs.port = parseInt(process.env.PORT);
     specs.access_token = process.env.TOKEN;
